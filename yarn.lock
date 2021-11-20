@@ -198,6 +198,13 @@
   dependencies:
     tslib "^2.3.0"
 
+"@angular/material@13.0.2":
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-13.0.2.tgz#bbab63f69c9227110b7e22d694fe984528b3d5c2"
+  integrity sha512-DbbkQFpZ73oxOuR9LkkpeUPWP31DNIG3Z94sOrtdBhX3HfbLLOCaAJAIwMl8+bEuzDgtWBmx3taUR8l4WKCO8g==
+  dependencies:
+    tslib "^2.3.0"
+
 "@angular/platform-browser-dynamic@~13.0.0":
   version "13.0.2"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-13.0.2.tgz#596dfbf5041210d2ecb959d2f298e86940a2adec"
@@ -4401,6 +4408,13 @@ make-fetch-happen@^9.0.1, make-fetch-happen@^9.1.0:
     promise-retry "^2.0.1"
     socks-proxy-agent "^6.0.0"
     ssri "^8.0.0"
+
+mdb-angular-ui-kit@1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/mdb-angular-ui-kit/-/mdb-angular-ui-kit-1.5.0.tgz#7737388b6ba321e2a99c7725c5de54b075097223"
+  integrity sha512-eIVLBviBYU+opIVPVJRjtSR/SUX8RmUfblK6HkrOeRGAqsDBFytDMA3oZKrvyPtjyzWMYibXTE9eK9jIFO2eKw==
+  dependencies:
+    tslib "^2.0.0"
 
 media-typer@0.3.0:
   version "0.3.0"

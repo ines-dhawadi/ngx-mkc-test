@@ -8,7 +8,8 @@ import { Meetings } from 'src/app/dto/meeting';
   styleUrls: ['./meetings.component.scss']
 })
 export class MeetingsComponent implements OnInit {
- 
+  addOption = false;
+  isOn = false;
   constructor( ) { }
 
   ngOnInit(): void {

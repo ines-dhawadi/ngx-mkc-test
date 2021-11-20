@@ -1,1 +1,296 @@
-<p>meeting works!</p>
+<div class="container-fluid">
+    
+    <h1  class="meeting_list_title">
+      Liste des réunions
+  
+     
+   
+
+<!-- Button trigger modal -->
+
+    <i  data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bnt-isOn fas fa-plus-circle "></i>
+</h1>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel"> 
+            Ajouter réunions
+        
+            
+         </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Informations" type="button" role="tab" aria-controls="Informations" aria-selected="true"> <h6>Informations</h6></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Invitation" type="button" role="tab" aria-controls="Invitation" aria-selected="false"><h6>Invitation</h6></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Planification" type="button" role="tab" aria-controls="Planification" aria-selected="false"> <h6>Planification</h6></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="point-tab" data-bs-toggle="tab" data-bs-target="#point" type="button" role="tab" aria-controls="contact" aria-selected="false"><h6>Points à discuter</h6></button>
+                  </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="Informations" role="tabpanel" aria-labelledby="home-tab"><!--start Informations-->
+                    <div >
+                     
+              
+                      <form class="mt-2" action="">
+                        <label for="exampleDataList" class="form-label"
+                          >Title of meeting <span>*</span></label
+                        >
+                        <input class="form-control" required />
+                        <label for="exampleDataList" class="form-label"
+                          >Type <span>*</span>
+                        </label>
+                        <input
+                          class="form-control"
+                          required
+                          list="datalistOptions"
+                          id="exampleDataList"
+                          placeholder="Type to search..."
+                        />
+                        <datalist id="datalistOptions">
+                          <option value="San Francisco"></option>
+                          <option value="New York"></option>
+                          <option value="Seattle"></option>
+                          <option value="Los Angeles"></option>
+                          <option value="Chicago"></option>
+                        </datalist>
+              
+                        <label for="exampleDataList" class="form-label"
+                          >Minutes Responsible <span>*</span></label
+                        >
+                        <input class="form-control" required />
+                        <p class="addOption" (click)="addOption = true">
+                          + Add another address field (optional)
+                        </p>
+                        <input *ngIf="addOption" class="form-control mb-1" required />
+                      </form>
+                    </div>
+                    <!--end Informations--></div>
+                <div class="tab-pane fade" id="Invitation" role="tabpanel" aria-labelledby="profile-tab">
+                    <!--start Invitation-->
+      <div >
+        
+        <form class="mt-3" action="">
+          <div class="form-check form-switch">
+            <p class="label-same">Same as shipping address</p>
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="flexSwitchCheckChecked"
+              checked
+            />
+          </div>
+          <label for="exampleDataList" class="form-label"
+            >State <span>*</span></label
+          >
+          <input class="form-control w-50" required />
+
+          <label for="exampleDataList" class="form-label"
+            >Email <span>*</span></label
+          >
+          <input class="form-control" required />
+          <p class="under_remark_title">
+            You will be able to create an accoint after purchasing
+          </p>
+
+          <label for="exampleDataList" class="form-label"
+            >Phone <span>*</span>
+            <span class="under_remark_title">
+              For delivery-related queries
+            </span>
+          </label>
+          <input class="form-control" required />
+        </form>
+      </div>
+      <!--end Invitation-->
+                </div>
+                <div class="tab-pane fade" id="Planification" role="tabpanel" aria-labelledby="contact-tab"><!--start Planification-->
+                    <div >
+                      
+              
+                      <form  action="">
+                        <label for="exampleDataList" class="form-label mt-5"
+                          >State <span>*</span></label
+                        >
+                        <input class="form-control w-50" required />
+              
+                        <label for="exampleDataList" class="form-label"
+                          >Email <span>*</span></label
+                        >
+                        <input class="form-control" required />
+                        <p class="under_remark_title">
+                          You will be able to create an accoint after purchasing
+                        </p>
+              
+                        <label for="exampleDataList" class="form-label"
+                          >Phone <span>*</span>
+                          <span class="under_remark_title">
+                            For delivery-related queries
+                          </span>
+                        </label>
+                        <input class="form-control" required />
+                      </form>
+                    </div>
+                    <!--end Planification--></div>
+                <div class="tab-pane fade" id="point" role="tabpanel" aria-labelledby="contact-tab">
+
+                    <!---start Points à discuter -->
+                    <table class="table meeting_list">
+                        <thead class="thead-table-">
+                          <tr >
+                            <th class="subtitle">Points à discuter</th>
+                  
+                            
+                            
+                            <th>
+                                <i *ngIf="isOn" (click)="isOn =false" class="off fas fa-times-circle me-5"></i>
+                                <i *ngIf="!isOn" (click)="isOn=true" class="fas fa-plus-circle "></i></th>
+                          </tr>
+                         
+                        </thead>
+                        <tbody class="">
+                            <tr>
+                                <td *ngIf="isOn">  <input type="text">  </td>
+                            </tr>
+                          <tr>
+                            <td>Anna Atkinsone</td>
+                          
+                            <td>
+                              <div class="table_icons">
+                                <i class="fas fa-pen"></i>
+                                <i class="delete fas fa-times-circle"></i>
+                                <i class="fas fa-ellipsis-v"></i>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Mark Atkinsone</th>
+                           
+                            <div class="table_icons">
+                              <i class="fas fa-pen"></i>
+                              <i class="delete fas fa-times-circle"></i>
+                              <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                          </tr>
+                          <tr>
+                            <th scope="row">Mark Atkinsone</th>
+                           
+                            <div class="table_icons">
+                              <i class="fas fa-pen"></i>
+                              <i class="delete fas fa-times-circle"></i>
+                              <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!--end Points à discuter-->
+                </div>
+              </div>
+            
+              
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-annuler" data-bs-dismiss="modal"> annuler</button>
+          <button type="button" class="btn btn-valider">valider</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+   <!-- start meeting_list-->
+ 
+   <div class="container">
+    <table class="table meeting_list">
+      <thead class="thead-table-">
+        <tr *ngIf="isOn">
+          <th class="subtitle">Points à discuter</th>
+
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th><i class="fas fa-plus-circle fa-2x"></i></th>
+        </tr>
+        <tr>
+          <th scope="col">
+            Réunion <br />
+            <input class="input" *ngIf="!isOn" type="text" />
+          </th>
+          <th scope="col">
+            Titre réunion <br />
+            <input *ngIf="!isOn" class="input" type="text" />
+          </th>
+          <th scope="col">
+            Date réunion <br />
+            <input *ngIf="!isOn" class="input" type="text" />
+          </th>
+          <th scope="col">
+            Type <br />
+            <input *ngIf="!isOn" class="input" type="text" />
+          </th>
+          <th scope="col">
+            Date réunion <br />
+            <input *ngIf="!isOn" class="input" type="text" />
+          </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="">
+        <tr>
+          <td>Anna Atkinsone</td>
+          <td>Total users</td>
+          <td>21323</td>
+          <td>234</td>
+          <td>Converted users</td>
+          <td>
+            <div class="table_icons">
+              <i class="fas fa-pen"></i>
+              <i class="delete fas fa-times-circle"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Mark Atkinsone</th>
+          <td>Total users</td>
+          <td>Total impressions</td>
+          <td>Converted users</td>
+          <td>Converted users</td>
+          <div class="table_icons">
+            <i class="fas fa-pen"></i>
+            <i class="delete fas fa-times-circle"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </tr>
+        <tr>
+          <th scope="row">Mark Atkinsone</th>
+          <td>Total users</td>
+          <td>Total impressions</td>
+          <td>Converted users</td>
+          <td>Converted users</td>
+          <div class="table_icons">
+            <i class="fas fa-pen"></i>
+            <i class="delete fas fa-times-circle"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  <!-- end meeting_list-->
+
+
+  

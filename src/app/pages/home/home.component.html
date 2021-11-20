@@ -1,226 +1,252 @@
+<!---->
+<div class="container">
+  <!--start  section-strategies-->
+  <div class="section-strategies">
+    <h4 id="strategies" class="title-strategies">strategies</h4>
+
+    <div class="container d-flex flex-wrap justify-content-around me-5 ms-5">
+      <div *ngFor="let item of strategies" class="col-md-3">
+        <div class="card-item">
+          <img class="w-25 h-75 mt-2 ms-2 me-2" [src]="item.icon" alt="" />
+          <p class="desc">{{ item.title }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end  section-strategies-->
+  <!-- start section-pilotings-->
+
+  <div class="section-pilotings">
+    <h4 class="title">Pilotage</h4>
+    <div class="container d-flex flex-wrap justify-content-around me-5 ms-5">
+      <div
+        *ngFor="let item of pilotings"
+        class="col-md-3"
+        (click)="navigTo(item.path)"
+      >
+        <div class="card-item">
+          <img class="w-25 h-75 mt-2 ms-2 me-2" [src]="item.icon" alt="" />
+          <p class="desc">{{ item.title }}</p>
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end  section-pilotings-->
+  <!--- start section-qualites-->
+  <div class="section-qualites">
+    <h4 class="title">Quality</h4>
+
+    <div class="container d-flex flex-wrap justify-content-around me-5 ms-5">
+      <div *ngFor="let item of qualites" class="col-md-3">
+        <div class="card-item">
+          <img class="w-25 h-75 mt-2 ms-2 me-2" [src]="item.icon" alt="" />
+          <p class="desc">{{ item.title }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--- end section-qualites-->
+</div>
 
 <!---->
-<div class=" container    " >
-    <!--start  section-strategies-->
-   <div class="section-strategies ">
-       <h4 id="strategies" class="title-strategies">strategies</h4>
-   
-   <div class=" container d-flex flex-wrap justify-content-around me-5 ms-5">
-   <div *ngFor="let item of strategies"  class="col-md-3   ">
-      
-   <div class="card-item">
-         
-   <img class="w-25 h-75 mt-2 ms-2 me-2" [src]="item.icon" alt="">
-   <p class="desc ">{{ item.title }}</p>
-   
-   </div>
-   </div>
-   </div>
-   </div>
-    <!--end  section-strategies-->
-   <!-- start section-pilotings-->
-   
-       <div class="section-pilotings ">
-        <h4 class="title">Pilotage</h4>
-        <div class=" container d-flex flex-wrap justify-content-around me-5 ms-5">
-    <div *ngFor="let item of pilotings"  class="col-md-3  ">
-      
-    <div class="card-item">
-           
-    <img class="w-25 h-75 mt-2 ms-2 me-2" [src]="item.icon" alt="">
-    <p class="desc ">{{ item.title }}</p>
-    
+<div class="container-fluid">
+  <h1 *ngIf="isOn" class="meeting_list_title">
+    Ajouter réunions
+
+    <i (click)="isOn = false" class="bnt-isOf fas fa-times-circle"></i>
+  </h1>
+  <h1 *ngIf="!isOn" class="meeting_list_title">
+    Liste des réunions
+
+    <i (click)="isOn = true" class="bnt-isOn fas fa-plus-circle"></i>
+  </h1>
+
+  <!---->
+  <div *ngIf="isOn" class="container meeting_list_form">
+    <div class="row">
+      <!--start Informations-->
+      <div class="col-md-4">
+        <h6>Informations</h6>
+
+        <form class="mt-5" action="">
+          <label for="exampleDataList" class="form-label"
+            >Title of meeting <span>*</span></label
+          >
+          <input class="form-control" required />
+          <label for="exampleDataList" class="form-label"
+            >Type <span>*</span>
+          </label>
+          <input
+            class="form-control"
+            required
+            list="datalistOptions"
+            id="exampleDataList"
+            placeholder="Type to search..."
+          />
+          <datalist id="datalistOptions">
+            <option value="San Francisco"></option>
+            <option value="New York"></option>
+            <option value="Seattle"></option>
+            <option value="Los Angeles"></option>
+            <option value="Chicago"></option>
+          </datalist>
+
+          <label for="exampleDataList" class="form-label"
+            >Minutes Responsible <span>*</span></label
+          >
+          <input class="form-control" required />
+          <p class="addOption" (click)="addOption = true">
+            + Add another address field (optional)
+          </p>
+          <input *ngIf="addOption" class="form-control mb-5" required />
+        </form>
+      </div>
+      <!--end Informations-->
+      <!--start Invitation-->
+      <div class="col-md-4">
+        <h6>Invitation</h6>
+        <form class="mt-3" action="">
+          <div class="form-check form-switch">
+            <p class="label-same">Same as shipping address</p>
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="flexSwitchCheckChecked"
+              checked
+            />
+          </div>
+          <label for="exampleDataList" class="form-label"
+            >State <span>*</span></label
+          >
+          <input class="form-control w-50" required />
+
+          <label for="exampleDataList" class="form-label"
+            >Email <span>*</span></label
+          >
+          <input class="form-control" required />
+          <p class="under_remark_title">
+            You will be able to create an accoint after purchasing
+          </p>
+
+          <label for="exampleDataList" class="form-label"
+            >Phone <span>*</span>
+            <span class="under_remark_title">
+              For delivery-related queries
+            </span>
+          </label>
+          <input class="form-control" required />
+        </form>
+      </div>
+      <!--end Invitation-->
+      <!--start Planification-->
+      <div class="col-md-4">
+        <h6>Planification</h6>
+
+        <form class="mt-3" action="">
+          <label for="exampleDataList" class="form-label mt-5"
+            >State <span>*</span></label
+          >
+          <input class="form-control w-50" required />
+
+          <label for="exampleDataList" class="form-label"
+            >Email <span>*</span></label
+          >
+          <input class="form-control" required />
+          <p class="under_remark_title">
+            You will be able to create an accoint after purchasing
+          </p>
+
+          <label for="exampleDataList" class="form-label"
+            >Phone <span>*</span>
+            <span class="under_remark_title">
+              For delivery-related queries
+            </span>
+          </label>
+          <input class="form-control" required />
+        </form>
+      </div>
+      <!--end Planification-->
     </div>
-    </div>
-    </div>
-    </div>
-    <!--end  section-pilotings-->
-    <!--- start section-qualites-->
-   <div class="section-qualites">
-       <h4 class="title">Quality</h4>
-   
-   <div class=" container d-flex flex-wrap justify-content-around me-5 ms-5">
-   <div *ngFor="let item of qualites"  class="col-md-3 ">
-       
-   <div class="card-item">
-         
-   <img class="w-25 h-75 mt-2 ms-2 me-2" [src]="item.icon" alt="">
-    <p class="desc ">{{ item.title }}</p>
-   
-   
-   </div>
-   </div>
-   </div>
-   </div>  
-    <!--- end section-qualites-->
-   </div>
-   
-   
-   <!---->
-   <div class="container-fluid" >
-       <h1 *ngIf="isOn" class="  meeting_list_title ">  Ajouter réunions
-          
-           <i (click)="isOn= false" class="bnt-isOf fas fa-times-circle "></i>
-       </h1>
-       <h1 *ngIf="!isOn" class="  meeting_list_title ">
-           Liste des réunions
-          
-           <i (click)="isOn= true" class=" bnt-isOn fas fa-plus-circle"></i>
-           </h1>
-          
-       
-          <!---->
-   <div *ngIf="isOn" class="container meeting_list_form">
-   
-       <div class="row">
-            <!--start Informations-->
-   <div class="col-md-4">
-       <h6>Informations</h6>
-   
-       <form  class="mt-5" action="">
-           <label for="exampleDataList" class="form-label">Title of meeting <span>*</span></label>
-   <input class="form-control" required >
-           <label for="exampleDataList" class="form-label">Type <span>*</span> </label>
-   <input class="form-control" required list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-   <datalist id="datalistOptions">
-     <option value="San Francisco">
-     <option value="New York">
-     <option value="Seattle">
-     <option value="Los Angeles">
-     <option value="Chicago">
-   </datalist>
-   <label for="exampleDataList" class="form-label">Minutes Responsible <span>*</span></label>
-   <input class="form-control" required >
-   <p  class="addOption " (click)="addOption= true">+ Add another address field (optional)</p>
-   <input  *ngIf="addOption" class="form-control mb-5" required >
-       </form>
-   </div>
-     <!--end Informations-->
-    <!--start Invitation-->
-   <div class="col-md-4">
-   
-       <h6>Invitation</h6>
-       <form  class="mt-3" action="">
-           <div class="form-check form-switch ">
-             <p class="label-same">Same as shipping address </p>
-               <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-               
-             </div>
-           <label for="exampleDataList" class="form-label">State <span>*</span></label>
-   <input class="form-control w-50" required >
-          
-   <label for="exampleDataList" class="form-label">Email <span>*</span></label>
-   <input class="form-control" required >
-   <p class=" under_remark_title">You will be able to create an accoint after purchasing</p>
-   
-   <label for="exampleDataList" class="form-label">Phone <span>*</span> <span class=" under_remark_title"> For delivery-related queries  </span>  </label>
-   <input class="form-control" required >
-   
-   
-   
-       </form>
-   
-   </div>
-    <!--end Invitation-->
-    <!--start Planification-->
-   <div class="col-md-4">
-   
-       <h6>Planification</h6>
-    
-       <form  class="mt-3" action="">
-           
-           <label for="exampleDataList" class="form-label mt-5">State <span>*</span></label>
-   <input class="form-control w-50" required >
-          
-   <label for="exampleDataList" class="form-label">Email <span>*</span></label>
-   <input class="form-control" required >
-   <p class=" under_remark_title">You will be able to create an accoint after purchasing</p>
-   
-   <label for="exampleDataList" class="form-label">Phone <span>*</span> <span class=" under_remark_title"> For delivery-related queries  </span>  </label>
-   <input class="form-control" required >
-   
-   
-   
-       </form>
-   
-   </div>
-    <!--end Planification-->
-    </div>
-   
-   </div>
-           <!-- start meeting_list-->
-           <div class="container">
-       <table class="table meeting_list">
-           <thead class="thead-table-">
-               <tr *ngIf="isOn"  >
-                   <th  class="subtitle"> Points à discuter </th>
-              
-               <th></th>
-               <th></th>
-               <th></th>
-               <th></th>
-               <th><i  class=" fas fa-plus-circle fa-2x"></i></th>
-           </tr>
-             <tr>
-               <th scope="col">Réunion <br>
-                   <input  class="input" *ngIf="!isOn" type="text">
-               </th>
-               <th   scope="col">Titre réunion   <br>   <input *ngIf="!isOn"  class="input" type="text">
-               </th>
-               <th  scope="col">Date réunion   <br> <input *ngIf="!isOn"  class="input" type="text">
-               </th>
-               <th  scope="col">Type   <br> <input *ngIf="!isOn"   class="input"type="text">
-               </th>
-               <th   scope="col">Date réunion   <br> <input  *ngIf="!isOn"  class="input"type="text">
-               </th>
-               <th></th>
-             </tr>
-           </thead>
-           <tbody class="">
-             <tr>
-              
-               <td>Anna Atkinsone</td>
-               <td>Total users</td>
-               <td>21323</td>
-               <td>234</td>
-               <td>Converted users</td>
-               <td > 
-                   <div class="table_icons">
-                   <i class="fas fa-pen"></i>
-                   <i  class=" delete fas  fa-times-circle "></i> 
-                   <i class="fas fa-ellipsis-v"></i>
-               </div>
-               </td>
-              
-              
-             </tr>
-             <tr>
-               <th scope="row">Mark Atkinsone</th>
-               <td>Total users</td>
-               <td>Total impressions</td>
-               <td>Converted users</td>
-               <td>Converted users</td>
-               <div class="table_icons">
-                   <i class="fas fa-pen"></i>
-                   <i  class=" delete fas  fa-times-circle "></i> 
-                   <i class="fas fa-ellipsis-v"></i>
-               </div>
-             </tr>
-             <tr>
-              <th scope="row">Mark Atkinsone</th>
-              <td>Total users</td>
-              <td>Total impressions</td>
-              <td>Converted users</td>
-              <td>Converted users</td>
-               <div class="table_icons">
-                   <i class="fas fa-pen"></i>
-                   <i  class=" delete fas  fa-times-circle "></i> 
-                   <i class="fas fa-ellipsis-v"></i>
-               </div>
-             </tr>
-             
-           </tbody>
-         </table> 
-   </div>
-    <!-- end meeting_list-->
-   </div>
+  </div>
+  <!-- start meeting_list-->
+  <div class="container">
+    <table class="table meeting_list row-border hover" datatable >
+      <thead class="thead-table-">
+        <tr *ngIf="isOn">
+          <th class="subtitle">Points à discuter</th>
+
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th><i class="fas fa-plus-circle fa-2x"></i></th>
+        </tr>
+        <tr>
+          <th scope="col">
+            Réunion <br />
+            <input class="input" *ngIf="!isOn" type="text" />
+          </th>
+          <th scope="col">
+            Titre réunion <br />
+            <input *ngIf="!isOn" class="input" type="text" />
+          </th>
+          <th scope="col">
+            Date réunion <br />
+            <input *ngIf="!isOn" class="input" type="text" />
+          </th>
+          <th scope="col">
+            Type <br />
+            <input *ngIf="!isOn" class="input" type="text" />
+          </th>
+          <th scope="col">
+            Date réunion <br />
+            <input *ngIf="!isOn" class="input" type="text" />
+          </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="">
+        <tr>
+          <td>Anna Atkinsone</td>
+          <td>Total users</td>
+          <td>21323</td>
+          <td>234</td>
+          <td>Converted users</td>
+          <td>
+            <div class="table_icons">
+              <i class="fas fa-pen"></i>
+              <i class="delete fas fa-times-circle"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Mark Atkinsone</th>
+          <td>Total users</td>
+          <td>Total impressions</td>
+          <td>Converted users</td>
+          <td>Converted users</td>
+          <div class="table_icons">
+            <i class="fas fa-pen"></i>
+            <i class="delete fas fa-times-circle"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </tr>
+        <tr>
+          <th scope="row">Mark Atkinsone</th>
+          <td>Total users</td>
+          <td>Total impressions</td>
+          <td>Converted users</td>
+          <td>Converted users</td>
+          <div class="table_icons">
+            <i class="fas fa-pen"></i>
+            <i class="delete fas fa-times-circle"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- end meeting_list-->
+</div>

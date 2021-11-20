@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api/api.service';
 import { Piloting } from 'src/app/dto/piloting';
 
@@ -15,7 +16,8 @@ export class HomeComponent implements OnInit {
  strategies!:Piloting[]
  pilotings!: Piloting[]
  qualites!:Piloting[]
- constructor(protected apiService: ApiService<Piloting>) { }
+ 
+ constructor(protected router: Router, protected apiService: ApiService<Piloting>) { }
 
  ngOnInit(): void {
    
@@ -34,7 +36,12 @@ export class HomeComponent implements OnInit {
     this.qualites = res as Piloting[];
     console.log("  qualites ", this.qualites)
   })
+
+
  }
 
+ navigTo(path:string){
+this.router.navigateByUrl(path)
+ }
 
 }

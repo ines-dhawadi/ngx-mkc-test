@@ -1,0 +1,174 @@
+$color-1:#336b1b;
+$color-2:#caebc9;
+$color-3:rgb(102, 100, 104);
+$font-family_all: 'proxima-nova', sans-serif !important;
+/******************/
+.meeting_list{
+    border: 1px solid rgb(224, 223, 226);
+    box-shadow: 0 5px 5px -5px #333;
+    color: $color-3;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+.thead-table-{
+    border-bottom: 1px solid rgb(224, 223, 226);
+    background-color: $color-2;
+}
+
+.input{
+    border: 1px solid $color-1;
+    background-color: white;
+    width: 110px;
+    border-radius: 24px;
+    margin: 10px 2px 15px 2px ;
+}
+.meeting_list_title{
+    box-shadow: 0 5px 5px -5px rgb(5, 5, 5);
+    padding-left: 50px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    margin-top: 80px;
+    color: $color-1;
+    
+    
+}
+.bnt-isOn{
+    margin-left: 45rem !important;
+}
+.bnt-isOf{
+    color: red;
+    margin-left: 47rem;
+}
+.table_icons{
+   
+    display: flex;
+    justify-content: space-around;
+
+    .fa-pen{
+        color: blue;
+    }
+
+    .delete{
+        color: red !important;
+    }
+    
+}
+.off  {
+    color: red !important;
+    margin-left: 10rem;
+}
+.fa-plus-circle{
+    margin-left: 17rem;
+}
+.subtitle{
+    color: $color-1;
+    
+}
+
+/********************/
+h6{
+    color: $color-1;
+}
+
+span{
+    color: red;
+}
+label{
+    color: $color-3;
+    font-family: $font-family_all;
+    margin-top: 25px;
+}
+.addOption{
+    cursor:pointer ;
+    margin-top: 25px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.877);
+}
+
+.fa-plus-circle , .form-check-input{
+    color: $color-1;
+}
+
+.form-switch .form-check-input:checked{
+    color: $color-1 !important;  
+}
+.form-switch .form-check-input{
+    background-color: white;
+    border: 1px solid #336b1b98;
+    margin-left: 180px;
+  
+}
+.form-switch .form-check-input:checked{
+    background-color: #336b1b98;
+    margin-left: 180px;
+   
+}
+
+.label-same{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.877);
+    
+position: absolute;
+}
+.form-switch{
+    display: flex !important;
+}
+.under_remark_title{
+    font-size: 13px;
+    margin-top: 10px;
+    color: $color-3;
+}
+.meeting_list_form{
+    border: 1px solid $color-3;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 5px -5px rgb(5, 5, 5);
+}
+
+.modal-header{
+    background-color: #336b1b;
+}
+
+.modal-dialog  .modal-content{
+    border-radius: 20px;
+ 
+  
+}
+
+.modal-header{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+@media (min-width: 576px)
+{.modal-dialog {
+    max-width: 556px;
+    margin: 1.75rem auto;
+    border-top-right-radius: 20px;
+    
+}}
+
+.modal.fade{
+    background-color: rgba(0, 0, 0, 0.842);
+    background-image: url(/assets/images/logo.png);
+    background-repeat: no-repeat;
+}
+.modal-title{
+    color: white;
+    font-family: $font-family_all;
+}
+.nav-tabs{
+    background-color: rgb(230, 238, 230);
+    border-radius: 20px;
+}
+
+.btn-annuler{
+    border: 2px solid red;
+    border-radius: 24px;
+    background-color: rgb(230, 238, 230);
+}
+
+.btn-valider{
+    border: 2px solid $color-1;
+    border-radius: 24px;
+    background-color: rgb(230, 238, 230);
+}

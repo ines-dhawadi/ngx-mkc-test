@@ -1,7 +1,8 @@
 export class Piloting {
     id!: number;
     icon!: string;
-    title!: string
+    title!: string;
+    path!:string
 
 
 }

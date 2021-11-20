@@ -16,14 +16,14 @@
     { "id": 8, "icon": "/assets/images/icons/icon-8.png", "title": "VALIDATION ET APPROBATION DES BUDGETS" }
   ],
   "pilotings": [
-    { "id": 1, "icon": "/assets/images/icons/icon-5.png", "title": "VUE NAVIGATEUR","path": "" },
-    { "id": 2, "icon": "/assets/images/icons/icon-5.png", "title": "VUE TB","path": "" },
-    { "id": 3, "icon": "/assets/images/icons/icon-5.png", "title": "MODÉLISATION" ,"path": ""},
-    { "id": 4, "icon": "/assets/images/icons/icon-5.png", "title": "AFFECTATION DE SAISIE","path": "" },
+    { "id": 1, "icon": "/assets/images/icons/icon-5.png", "title": "VUE NAVIGATEUR","path": "NAVIGATEUR" },
+    { "id": 2, "icon": "/assets/images/icons/icon-5.png", "title": "VUE TB","path": "TB" },
+    { "id": 3, "icon": "/assets/images/icons/icon-5.png", "title": "MODÉLISATION" ,"path": "MODÉLISATION"},
+    { "id": 4, "icon": "/assets/images/icons/icon-5.png", "title": "AFFECTATION DE SAISIE","path": "AFFECTATION" },
     { "id": 5, "icon": "/assets/images/icons/icon-5.png", "title": "REUNION","path": "meetings" },
-    { "id": 6, "icon": "/assets/images/icons/icon-5.png", "title": "GESTION DES ACTIONS","path": "" },
-    { "id": 7, "icon": "/assets/images/icons/icon-5.png", "title": "GESTION DES PROJETS","path": "" },
-    { "id": 8, "icon": "/assets/images/icons/icon-5.png", "title": "REVUE DE DIRECTION" ,"path": ""}
+    { "id": 6, "icon": "/assets/images/icons/icon-5.png", "title": "GESTION DES ACTIONS","path": "ACTIONS" },
+    { "id": 7, "icon": "/assets/images/icons/icon-5.png", "title": "GESTION DES PROJETS","path": "PROJETS" },
+    { "id": 8, "icon": "/assets/images/icons/icon-5.png", "title": "REVUE DE DIRECTION" ,"path": "DIRECTION"}
   ],
   "qualites": [
     { "id": 1, "icon": "/assets/images/icons/icon-1.png", "title": "MISSION, VISION, CULTURE" },
@@ -54,7 +54,7 @@
     { "id": 1, "label": "Stategy", "path": "strategies" },
     { "id": 2, "label": "Pilotage", "path": "piloting"  },
     { "id": 3,"label": "Quality", "path": "quality"  },
-    { "id": 4,"label": "Talent", "path": "talent"},
-    { "id": 5, "label": "", "path": "meetings" }
+    { "id": 4,"label": "Talent", "path": "talent"}
+ 
   ]
 }
