@@ -1,0 +1,60 @@
+{
+  "meetings": [
+    { "id": 1, "reuinion": "Anna Atkinsone", "titleReunion ": "Total users" , "DateReunion":"21323" ,"Type": "234" , "date": "Converted users "  },
+    { "id": 2, "reuinion": "Mark Atkinsone", "titleReunion ": "Total users" , "DateReunion":"Total impressions" ,"Type": "Converted users" , "date": "Converted users "  },
+    { "id": 3, "reuinion": "Mark Atkinsone", "titleReunion": "Total users" , "DateReunion":"Total impressions" ,"Type": "Converted users" , "date": "Converted users "  },
+    { "id": 4, "reuinion": "Mark Atkinsone", "titleReunion": "Total users" , "DateReunion":"Total impressions" ,"Type": "Converted users" , "date": "Converted users "  }
+  ],
+  "strategies": [
+    { "id": 1, "icon": "/assets/images/icons/icon-1.png", "title": "MISSION, VISION, CULTURE" },
+    { "id": 2, "icon": "/assets/images/icons/icon-2.png", "title": "ANALYSE SWAT" },
+    { "id": 3, "icon": "/assets/images/icons/icon-3.png", "title": "PARTIE INTÉRÉSSÉE" },
+    { "id": 4, "icon": "/assets/images/icons/icon-4.png", "title": "AXES, SOUS AXES ET DOSSIERS" },
+    { "id": 5, "icon": "/assets/images/icons/icon-5.png", "title": "OBJECTIFS STRATÉGIQUES ET POLITIQUES" },
+    { "id": 6, "icon": "/assets/images/icons/icon-6.png", "title": "PLANS D'ACTIONS ANNUELLES" },
+    { "id": 7, "icon": "/assets/images/icons/icon-7.png", "title": "D.A.I( DEMANDE D'AUTORISATION D'INVESTISSEMENT )" },
+    { "id": 8, "icon": "/assets/images/icons/icon-8.png", "title": "VALIDATION ET APPROBATION DES BUDGETS" }
+  ],
+  "pilotings": [
+    { "id": 1, "icon": "/assets/images/icons/icon-5.png", "title": "VUE NAVIGATEUR" },
+    { "id": 2, "icon": "/assets/images/icons/icon-5.png", "title": "VUE TB" },
+    { "id": 3, "icon": "/assets/images/icons/icon-5.png", "title": "MODÉLISATION" },
+    { "id": 4, "icon": "/assets/images/icons/icon-5.png", "title": "AFFECTATION DE SAISIE" },
+    { "id": 5, "icon": "/assets/images/icons/icon-5.png", "title": "REUNION" },
+    { "id": 6, "icon": "/assets/images/icons/icon-5.png", "title": "GESTION DES ACTIONS" },
+    { "id": 7, "icon": "/assets/images/icons/icon-5.png", "title": "GESTION DES PROJETS" },
+    { "id": 8, "icon": "/assets/images/icons/icon-5.png", "title": "REVUE DE DIRECTION" }
+  ],
+  "qualites": [
+    { "id": 1, "icon": "/assets/images/icons/icon-1.png", "title": "MISSION, VISION, CULTURE" },
+    { "id": 2, "icon": "/assets/images/icons/icon-5.png", "title": "ANALYSE SWOT " },
+    { "id": 3, "icon": "/assets/images/icons/icon-5.png", "title": "PARTIE INTÉRESSÉE" },
+    { "id": 4, "icon": "/assets/images/icons/icon-5.png", "title": "AXES, SOUS AXES ET DOSSIERS" },
+    { "id": 5, "icon": "/assets/images/icons/icon-1.png", "title": "OBJECTIFS STRATÉGIQUES ET POLITIQUES" },
+    { "id": 6, "icon": "/assets/images/icons/icon-1.png", "title": "PLANS D'ACTIONS ANNUELLES" },
+    { "id": 7, "icon": "/assets/images/icons/icon-1.png", "title": "D.A.I( DEMANDE D'AUTORISATION D'INVESTISSEMENT" },
+    { "id": 8, "icon": "/assets/images/icons/icon-8.png", "title": " VALIDATION ET APPROBATION DES BUDGETS" }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "avatar": "avatar",
+      "fName": "Ines",
+      "lName": "Dhawedi",
+      "email": "inesdhaouadi96@gmail.com",
+      "password": "321Go!"
+    }
+  ],
+  "languages": [
+    { "id": 1, "ISO_639_1": "en", "label": "English" },
+    { "id": 2, "ISO_639_1": "ar", "label": "العربية" },
+    { "id": 3, "ISO_639_1": "fr", "label": "Français" }
+  ],
+  "navlinks": [
+    { "id": 1, "label": "Stategy", "path": "strategies" },
+    { "id": 2, "label": "Pilotage", "path": "piloting"  },
+    { "id": 3,"label": "Quality", "path": "quality"  },
+    { "id": 4,"label": "Talent", "path": "talent"},
+    { "id": 5, "label": "Meetings", "path": "meetings" }
+  ]
+}

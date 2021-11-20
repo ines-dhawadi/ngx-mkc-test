@@ -1,0 +1,17 @@
+$color-1:#336b1b;
+$color-2:#caebc9;
+nav{
+    background-color: $color-1;
+
+  
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: white !important; 
+}
+
+.icon-nav{
+    background-color: white;
+    border-radius: 50%;
+    padding: 8px;
+    margin-left: 7px;
+}
