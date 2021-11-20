@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+  "cli": {
+    "packageManager": "yarn"
+  },
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-mkc-test": {
+    "sfax-test": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-mkc-test",
+            "outputPath": "dist/sfax-test",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,9 +34,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -72,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ngx-mkc-test:build:production"
+              "browserTarget": "sfax-test:build:production"
             },
             "development": {
-              "browserTarget": "ngx-mkc-test:build:development"
+              "browserTarget": "sfax-test:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-mkc-test:build"
+            "browserTarget": "sfax-test:build"
           }
         },
         "test": {
@@ -107,5 +113,5 @@
       }
     }
   },
-  "defaultProject": "ngx-mkc-test"
+  "defaultProject": "sfax-test"
 }
