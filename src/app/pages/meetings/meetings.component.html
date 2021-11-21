@@ -39,7 +39,8 @@
                   </li>
               </ul>
               <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="Informations" role="tabpanel" aria-labelledby="home-tab"><!--start Informations-->
+                <div class="tab-pane fade show active" id="Informations" role="tabpanel" aria-labelledby="home-tab">
+                  <!--start Informations-->
                     <div >
                      
               
@@ -212,48 +213,52 @@
    <!-- start meeting_list-->
  
    <div class="container">
+    
+
+
+
     <table class="table meeting_list">
       <thead class="thead-table-">
-        <tr *ngIf="isOn">
-          <th class="subtitle">Points à discuter</th>
+        <tr >
+          <th class="subtitle"></th>
 
           <th></th>
           <th></th>
           <th></th>
           <th></th>
-          <th><i class="fas fa-plus-circle fa-2x"></i></th>
+          <th><input placeholder="Enter  name of  meeting to search " class="form-control"  name="reuinion" [(ngModel)]="reuinion" (ngModelChange)="Search() " type="text"></th>
         </tr>
         <tr>
           <th scope="col">
             Réunion <br />
-            <input class="input" *ngIf="!isOn" type="text" />
+            
           </th>
           <th scope="col">
             Titre réunion <br />
-            <input *ngIf="!isOn" class="input" type="text" />
+            
           </th>
           <th scope="col">
             Date réunion <br />
-            <input *ngIf="!isOn" class="input" type="text" />
+            
           </th>
           <th scope="col">
             Type <br />
-            <input *ngIf="!isOn" class="input" type="text" />
+            
           </th>
           <th scope="col">
             Date réunion <br />
-            <input *ngIf="!isOn" class="input" type="text" />
+            
           </th>
           <th></th>
         </tr>
       </thead>
-      <tbody class="">
+      <tbody  *ngFor="let meet of meetings" class="">
         <tr>
-          <td>Anna Atkinsone</td>
-          <td>Total users</td>
-          <td>21323</td>
-          <td>234</td>
-          <td>Converted users</td>
+          <td>{{meet.reuinion  }}</td>
+          <td>{{meet.titleReunion  }}</td>
+          <td>{{meet.DateReunion  }}</td>
+          <td>{{meet.Type  }}</td>
+          <td>{{meet. date  }}</td>
           <td>
             <div class="table_icons">
               <i class="fas fa-pen"></i>
@@ -262,30 +267,8 @@
             </div>
           </td>
         </tr>
-        <tr>
-          <th scope="row">Mark Atkinsone</th>
-          <td>Total users</td>
-          <td>Total impressions</td>
-          <td>Converted users</td>
-          <td>Converted users</td>
-          <div class="table_icons">
-            <i class="fas fa-pen"></i>
-            <i class="delete fas fa-times-circle"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-        </tr>
-        <tr>
-          <th scope="row">Mark Atkinsone</th>
-          <td>Total users</td>
-          <td>Total impressions</td>
-          <td>Converted users</td>
-          <td>Converted users</td>
-          <div class="table_icons">
-            <i class="fas fa-pen"></i>
-            <i class="delete fas fa-times-circle"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-        </tr>
+        
+        
       </tbody>
     </table>
   </div>

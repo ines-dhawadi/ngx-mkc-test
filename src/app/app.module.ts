@@ -12,6 +12,9 @@ import { StrategiesComponent } from './pages/strategies/strategies.component';
 import { TalentComponent } from './pages/talent/talent.component';
 import { PilotingComponent } from './pages/piloting/piloting.component';
 import { QualityComponent } from './pages/quality/quality.component';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+import { Ng2SearchPipeModule} from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,6 +33,9 @@ import { QualityComponent } from './pages/quality/quality.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    Ng2OrderModule,
+    Ng2SearchPipeModule,
+    FormsModule, 
     FontAwesomeModule
   ],
   providers: [],

@@ -53,7 +53,7 @@
   "navlinks": [
     { "id": 1, "label": "Stategy", "path": "strategies" },
     { "id": 2, "label": "Pilotage", "path": "piloting"  },
-    { "id": 3,"label": "Quality", "path": "quality"  },
+    { "id": 3,"label": "Quality", "path": "quality()"  },
     { "id": 4,"label": "Talent", "path": "talent"}
  
   ]

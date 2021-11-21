@@ -9,31 +9,12 @@ import { Strategies } from 'src/app/dto/strategies';
   styleUrls: ['./piloting.component.scss']
 })
 export class PilotingComponent implements OnInit {
-  isOn = false;
-  addOption = false;
- // NavLink DTO (Data Transfer Object / Model)
- strategies!:Piloting[]
- pilotings!: Piloting[]
- qualites!:Piloting[]
+
  constructor(protected apiService: ApiService<Piloting>) { }
 
  ngOnInit(): void {
    
-   this.apiService.fetch("strategies").subscribe(res => {
-    this.strategies = res as Piloting[];
-    console.log("  strategies ", this.strategies)
-  })
-
-  this.apiService.fetch("pilotings").subscribe(res => {
-    this.pilotings = res as Piloting[];
-    console.log(" Pilotings ", this.pilotings)
-  })
-
-
-  this.apiService.fetch("qualites").subscribe(res => {
-    this.qualites = res as Piloting[];
-    console.log("  qualites ", this.qualites)
-  })
+  
  }
 
 }

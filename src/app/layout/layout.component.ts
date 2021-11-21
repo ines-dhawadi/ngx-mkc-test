@@ -20,4 +20,8 @@ export class LayoutComponent implements OnInit {
     })
   }
 
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
+  }
+
 }
